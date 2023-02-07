@@ -1,0 +1,58 @@
+
+/*
+  lenguajes usados:
+    java
+    javascript
+    typescript
+    c++ 
+  framework: 
+    bootstrap
+    angular
+  api:
+    rest
+    json
+     
+    */
+    
+html { border: 0.5rem solid black;
+       color: black;
+       font-family: Arial, sans-serif;
+       font-size: 10px;
+       /*font-weight: normal;*/ 
+       text-decoration-line: none; } /*15px*/
+
+.navbar-collapse { align-items: center;
+                   justify-content: space-between; }
+
+.bi { color: black;
+      font-size: 3rem; }
+
+h1 { color: grey;
+     font-size: 2.5rem; }
+
+h2, h3, h4, h5, h6 { text-decoration-line: underline;
+                     font-size: 2rem; }
+
+p, .progress { font-size: 1.5rem; }
+
+li { font-size: 1.5rem;
+     list-style-type: none; }
+
+body { background-image: linear-gradient( 135deg, #79F1A4 10%, #0E5CAD 100% ); 
+       padding: 2rem; }
+
+.card, .progress { /*border: 0.5rem solid blue;*/
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;       
+        margin-right: 0.5rem; }
+
+.btn-group {
+  float: inline-end;
+}
+
+.btn-outline-dark > .bi { 
+  font-size: 1.5rem;
+}
+
+
