@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit{
     this.form=this.formBuilder.group({
       password:['', [Validators.required, Validators.minLength(8)]],
       user:['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]]
+      //aqui va un token
     })
   }
 
@@ -30,6 +31,14 @@ export class LoginComponent implements OnInit{
   }
 
   ngOnInit(){}
+
+  get User(){
+    return this.form.get('user');
+  }
+
+  get Password(){
+    return this.form.get('password');
+  }
 
 }
 

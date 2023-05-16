@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndexComponent } from './components/index/index.component';
+import { SkillSaveComponent } from './modal/skill-save/skill-save.component';
+import { SkillUpdateComponent } from './modal/skill-update/skill-update.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { IndexComponent } from './components/index/index.component';
     SkillsComponent,
     ProyectosComponent,
     LoginComponent,
-    IndexComponent
+    IndexComponent,
+    SkillSaveComponent,
+    SkillUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+{
+    "skill": [
+
+        {
+        "name_skill": "CSS",
+
+        "level": "25"
+        },
+        {
+        "name_skill": "C++",
+
+        "level": "20"
+        },
+        {
+        "name_skill": "Java",
+
+        "level": "25"
+        },
+        {
+        "name_skill": "Javascript",
+
+        "level": "20"
+        }
+    ]
+}
