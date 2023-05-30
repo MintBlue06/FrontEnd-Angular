@@ -1,2 +1,53 @@
-<p>Falta terminar</p>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar habilidad</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" routerLink="/"></button>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="onUpdate($event)" name="skillForm" class="bg-white rounded p-5 seccion">
+            <div class="modal-body">
+                <input type="hidden" id="skillId" class="form-control" formControlName="id_skill" [ngModel]="skill.id_skill">
+                <div class="mb-3">
+
+                    <label for="skillName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="skillName"
+                        placeholder="Ingrese un nombre" formControlName="name_skill" [ngModel]="skill.name_skill" 
+                        [ngClass]="{'is-invalid': Name_Skill?.errors && Name_Skill?.touched,'is-valid': !Name_Skill?.errors && Name_Skill?.touched}">
+                        
+                        <div *ngIf="Name_Skill?.errors && Name_Skill?.touched">
+                            <p *ngIf="Name_Skill?.hasError('required')" class="text-danger">
+                                El nombre de la habilidad es requerido.
+                            </p>
+                        </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="skillLevel" class="form-label">Nivel</label>
+                    <input type="number" min="0" max="100" id="skillLevel"
+                    class="form-control" formControlName="level" [ngModel]="skill.level"
+                    placeholder="Ingrese un número entre 0 y 100"
+                    [ngClass]="{'is-invalid': Level?.errors && Level?.touched,'is-valid': !Level?.errors && Level?.touched}">
+
+                    <div *ngIf="Level?.errors && Level?.touched">
+                        <p *ngIf="Level?.hasError('required')" class="text-danger">
+                            El nivel de la habilidad es requerido.
+                        </p>
+                        <p *ngIf="Level?.hasError('min')" class="text-danger">
+                            El nivel minimo es 0.
+                        </p>
+                        <p *ngIf="Level?.hasError('max')" class="text-danger">
+                            El nivel maximo es 100.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
 
